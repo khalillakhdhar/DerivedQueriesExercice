@@ -53,6 +53,10 @@ public class Vendeur implements Serializable {
 	}
 	public Vendeur() {
 	}
+	@Override
+	public String toString() {
+		return "Vendeur [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + "]";
+	}
 	
 	
 
