@@ -41,30 +41,43 @@ ProduitService prs;
 		prs.addproduct(pr1);
 		prs.addproduct(pr2);
 		prs.addproduct(pr3);
-		List<Vendeur> lv=new ArrayList<Vendeur>();
-		lv=vs.filterBynomprenom("Musk", "bill");
-		int i=0;
-		for(Vendeur vd: lv)
+		List<Vendeur> lsv=new ArrayList<Vendeur>();
+		lsv=vs.jpqltest();
+		for(Vendeur v:lsv)
 		{
-			i++;
-			
-			System.out.println("vendeur filtré numéro "+i+ " "+ vd.toString());
-			
+			System.out.println(v.toString());
 		}
 		
-		List<Produit> lp=new ArrayList<Produit>();
-		lp=prs.searchQuantite(4);
-		for(Produit p:lp)
-		{
-			System.out.println("produit avec une quantité < 4 "+p.toString());
-			
-		}
-		List<Produit> lpdes=new ArrayList<Produit>();
-		lpdes=prs.searchByDescriptionContent("tesla");
-		for(Produit pr:lpdes)
-		{
-			System.out.println(" résultat filtré par description "+pr.toString());
-		}
+		
+		
+		
+//		List<Vendeur> lv=new ArrayList<Vendeur>();
+//		lv=vs.filterBynomprenom("Musk", "bill");
+//		int i=0;
+//		for(Vendeur vd: lv)
+//		{
+//			i++;
+//			
+//			System.out.println("vendeur filtré numéro "+i+ " "+ vd.toString());
+//			
+//		}
+//		
+//		List<Produit> lp=new ArrayList<Produit>();
+//		lp=prs.searchQuantite(4);
+//		for(Produit p:lp)
+//		{
+//			System.out.println("produit avec une quantité < 4 "+p.toString());
+//			
+//		}
+//		List<Produit> lpdes=new ArrayList<Produit>();
+//		lpdes=prs.searchByDescriptionContent("tesla");
+//		for(Produit pr:lpdes)
+//		{
+//			System.out.println(" résultat filtré par description "+pr.toString());
+//		}
+//		
+//		
+//		
 		
 	}
 

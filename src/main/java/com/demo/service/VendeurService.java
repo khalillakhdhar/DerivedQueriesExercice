@@ -25,7 +25,10 @@ public List<Vendeur> filterBynomprenom(String nom,String prenom)
 {
 return vendeurapi.findByNomOrPrenom(nom, prenom);	
 }
-
+public List<Vendeur> jpqltest()
+{
+return vendeurapi.findVendeurs();	
+}
 
 
 }

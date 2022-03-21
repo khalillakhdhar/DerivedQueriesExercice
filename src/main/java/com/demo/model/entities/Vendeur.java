@@ -2,6 +2,7 @@ package com.demo.model.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +21,7 @@ public class Vendeur implements Serializable {
 	@NotBlank
 	private String prenom;
 	@Lob
+	@Column(name = "useradress")
 	private String adresse;
 	public long getId() {
 		return id;
